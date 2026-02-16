@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Security Research - f.pixiv.net</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            padding: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        h1 { font-size: 2.5em; }
+        .handle { 
+            background: rgba(0,0,0,0.3); 
+            padding: 10px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 1.2em;
+        }
+        .domains {
+            text-align: left;
+            margin-top: 30px;
+            background: rgba(0,0,0,0.2);
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .vulnerable {
+            color: #ff9999;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔐 Subdomain Takeover Proof of Concept</h1>
+        <p>This domain (<strong>f.pixiv.net</strong>) was vulnerable to takeover.</p>
+        <p>Discovered by: <span class="handle">YOUR_ACTUAL_USERNAME</span></p>
+        <p>Date: <script>document.write(new Date().toDateString())</script></p>
+        
+        <div class="domains">
+            <h3>📋 Affected Domains Verified:</h3>
+            <ul>
+                <li class="vulnerable">✅ dic2.pixiv.net - GitHub Pages (IP: 185.199.109.153)</li>
+                <li class="vulnerable">✅ f.pixiv.net - GitHub Pages (IP: 185.199.108.153) <-- YOU ARE HERE</li>
+                <li class="vulnerable">✅ pr.pixiv.net - GitHub Pages (IP: 185.199.108.153)</li>
+                <li class="vulnerable">✅ secure.pixiv.net - GitHub Pages (IP: 185.199.110.153)</li>
+                <li class="vulnerable">✅ utpa.pixiv.net - GitHub Pages (IP: 185.199.108.153)</li>
+            </ul>
+            <p><em>This is a benign proof of concept demonstrating control.</em></p>
+            <p><em>No malicious content has been or will be hosted here.</em></p>
+        </div>
+        
+        <div style="margin-top: 30px; font-size: 0.9em; opacity: 0.8;">
+            <p>Report submitted to pixiv via HackerOne • Security Research • Responsible Disclosure</p>
+        </div>
+    </div>
+</body>
+</html>
